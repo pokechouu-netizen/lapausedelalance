@@ -185,7 +185,7 @@
         slot.innerHTML = '<span class="photo-slot__label">' + CMS.eh(PHOTOS[key]) + '</span>' +
           '<div class="photo-slot__wrap">' +
             '<input type="file" accept="image/*" onchange="replacePhoto(this,\'' + key + '\')">' +
-            (src ? '<img src="' + CMS.esc(CMS.imgSrc(src)) + '" alt="">'
+            (src ? '<img src="' + CMS.esc(CMS.previewSrc(src)) + '" alt="">'
                  : '<div class="photo-slot__empty">📷<span>Cliquer pour ajouter</span></div>') +
           '</div><p class="photo-slot__hint">Cliquer pour remplacer</p>';
         grid.appendChild(slot);
@@ -210,7 +210,7 @@
         slot.innerHTML = '<span class="photo-slot__label">' + CMS.eh(c.nom || ('Photo ' + (i + 1))) + '</span>' +
           '<div class="photo-slot__wrap">' +
             '<input type="file" accept="image/*" onchange="replaceCreationPhoto(this,' + i + ')">' +
-            (src ? '<img src="' + CMS.esc(CMS.imgSrc(src)) + '" alt="">'
+            (src ? '<img src="' + CMS.esc(CMS.previewSrc(src)) + '" alt="">'
                  : '<div class="photo-slot__empty">📷<span>Cliquer pour ajouter</span></div>') +
           '</div><p class="photo-slot__hint">Cliquer pour remplacer</p>';
         grid.appendChild(slot);

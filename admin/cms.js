@@ -9,6 +9,7 @@
   var GIT = '/.netlify/git/github/contents/';
   var BRANCH = 'main';
   var hookUrl = null;
+  var localPreviews = {}; // chemin repo → data URL (aperçu instantané des images tout juste téléversées)
 
   function jwt() {
     var u = (global.netlifyIdentity && netlifyIdentity.currentUser());
@@ -69,11 +70,17 @@
       var r = new FileReader();
       r.onerror = reject;
       r.onload = function (e) {
-        var b64 = e.target.result.split(',')[1];
+        var dataUrl = e.target.result;
+        var b64 = dataUrl.split(',')[1];
         var name = Date.now() + '_' + file.name.replace(/[^a-z0-9.\-_]/gi, '-').toLowerCase();
         var path = folder + '/' + name;
         gitPutRaw(path, { message: 'Image : ' + name, content: b64 })
-          .then(function () { resolve(path); }).catch(reject);
+          .then(function () {
+            // Mémorise l'aperçu local : le fichier est commité mais pas encore déployé (~1 min),
+            // donc on affiche l'image lue dans le navigateur en attendant.
+            localPreviews[path] = dataUrl;
+            resolve(path);
+          }).catch(reject);
       };
       r.readAsDataURL(file);
     });
@@ -114,6 +121,12 @@
     if (/^(https?:|\/|data:)/.test(path)) return path;
     return '../' + path;
   }
+  // Comme imgSrc, mais affiche l'aperçu local d'une image tout juste téléversée
+  // (le fichier est commité mais pas encore déployé). À utiliser pour TOUS les affichages d'images de l'admin.
+  function previewSrc(path) {
+    if (path && localPreviews[path]) return localPreviews[path];
+    return imgSrc(path);
+  }
   // Statut visuel (#statusEl)
   function status(type, msg) {
     var el = document.getElementById('statusEl');
@@ -127,6 +140,6 @@
     requireAuth: requireAuth,
     login: function () { netlifyIdentity.open(); },
     logout: function () { netlifyIdentity.logout(); },
-    esc: esc, eh: eh, imgSrc: imgSrc, status: status
+    esc: esc, eh: eh, imgSrc: imgSrc, previewSrc: previewSrc, status: status
   };
 })(window);

@@ -112,7 +112,7 @@
       el.innerHTML = '';
       data.creations.forEach(function (c, i) {
         var d = document.createElement('div'); d.className = 'item-card';
-        var img = c.image ? '<img class="thumb" src="' + CMS.esc(CMS.imgSrc(c.image)) + '" alt="">' : '<div class="no-thumb">🖼️</div>';
+        var img = c.image ? '<img class="thumb" src="' + CMS.esc(CMS.previewSrc(c.image)) + '" alt="">' : '<div class="no-thumb">🖼️</div>';
         d.innerHTML = img +
           '<div class="item-card__body">' +
             '<div class="item-card__title">' + CMS.eh(c.nom) + (c.visible === false ? '<span class="badge-hidden">Masqué</span>' : '') + '</div>' +
@@ -149,7 +149,7 @@
 
     function setPhoto(path) {
       var img = document.getElementById('photoImg'), empty = document.getElementById('photoEmpty');
-      if (path) { img.src = CMS.imgSrc(path); img.style.display = 'block'; empty.style.display = 'none'; }
+      if (path) { img.src = CMS.previewSrc(path); img.style.display = 'block'; empty.style.display = 'none'; }
       else { img.style.display = 'none'; empty.style.display = 'flex'; }
     }
 
