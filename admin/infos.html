@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infos & horaires — La Pause de la Lance</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <div id="loginScreen">
+    <div class="brand">La Pause de la Lance</div>
+    <h1>Infos &amp; horaires</h1>
+    <p>Connectez-vous pour modifier les coordonnées et les horaires.</p>
+    <button class="btn-login" onclick="CMS.login()">Se connecter</button>
+  </div>
+
+  <div id="adminScreen">
+    <div class="topbar">
+      <h1>🕒 Infos &amp; horaires</h1>
+      <span class="status" id="statusEl"></span>
+      <a href="index.html" class="btn btn-ghost btn-sm">← Admin</a>
+      <a href="../index.html#contact" target="_blank" class="btn btn-ghost btn-sm">Voir le site ↗</a>
+      <button class="btn-text" onclick="CMS.logout()">Déconnexion</button>
+    </div>
+
+    <div class="panel active">
+      <div class="section-card">
+        <p class="section-card__title">📍 Coordonnées</p>
+        <div class="fg"><label>Adresse</label><input type="text" id="adresse" placeholder="17 Rue Pasteur"></div>
+        <div class="frow">
+          <div class="fg"><label>Code postal</label><input type="text" id="code_postal" placeholder="84600"></div>
+          <div class="fg"><label>Ville</label><input type="text" id="ville" placeholder="Valréas"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Téléphone</label><input type="text" id="telephone" placeholder="06 78 69 78 54"></div>
+          <div class="fg"><label>Email</label><input type="text" id="email" placeholder="guymoiroud84@gmail.com"></div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <p class="section-card__title">📱 Réseaux sociaux</p>
+        <div class="fg"><label>Lien Facebook</label><input type="text" id="facebook" placeholder="https://www.facebook.com/Lapausedelalance"></div>
+        <div class="fg"><label>Lien Instagram</label><input type="text" id="instagram" placeholder="https://www.instagram.com/lapausedelalance/"></div>
+      </div>
+
+      <div class="section-card">
+        <p class="section-card__title">🕒 Horaires d'ouverture</p>
+        <p class="panel-hint" style="margin-bottom:1rem">Saisissez les horaires de chaque jour (ex : <em>11h00 – 14h30 • 18h30 – 21h30</em>). Écrivez <em>Fermé</em> pour un jour de fermeture.</p>
+        <div class="fg"><label>Lundi</label><input type="text" id="h_lundi"></div>
+        <div class="fg"><label>Mardi</label><input type="text" id="h_mardi"></div>
+        <div class="fg"><label>Mercredi</label><input type="text" id="h_mercredi"></div>
+        <div class="fg"><label>Jeudi</label><input type="text" id="h_jeudi"></div>
+        <div class="fg"><label>Vendredi</label><input type="text" id="h_vendredi"></div>
+        <div class="fg"><label>Samedi</label><input type="text" id="h_samedi"></div>
+        <div class="fg"><label>Dimanche</label><input type="text" id="h_dimanche"></div>
+      </div>
+
+      <div class="form-save-row">
+        <button class="btn btn-primary" id="saveBtn" onclick="saveAll()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cms.js"></script>
+  <script>
+  (function () {
+    'use strict';
+    var FILE = 'data/infos.json';
+    var DAYS = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+    var data = {}, sha = '';
+    function v(id) { return document.getElementById(id).value; }
+    function setv(id, val) { var el = document.getElementById(id); if (el) el.value = val == null ? '' : val; }
+
+    CMS.requireAuth(load);
+
+    function load() {
+      CMS.status('saving', 'Chargement…');
+      CMS.load(FILE).then(function (r) {
+        data = r.data; sha = r.sha;
+        var h = data.horaires || {};
+        setv('adresse', data.adresse); setv('code_postal', data.code_postal); setv('ville', data.ville);
+        setv('telephone', data.telephone); setv('email', data.email);
+        setv('instagram', data.instagram); setv('facebook', data.facebook);
+        DAYS.forEach(function (d) { setv('h_' + d, h[d]); });
+        CMS.status('', '');
+      }).catch(function (e) { CMS.status('error', 'Erreur de chargement'); console.error(e); });
+    }
+
+    window.saveAll = function () {
+      var btn = document.getElementById('saveBtn'); btn.disabled = true;
+      data.adresse = v('adresse').trim();
+      data.code_postal = v('code_postal').trim();
+      data.ville = v('ville').trim();
+      data.telephone = v('telephone').trim();
+      data.telephone_raw = data.telephone.replace(/[^0-9+]/g, '');
+      data.email = v('email').trim();
+      data.instagram = v('instagram').trim();
+      data.facebook = v('facebook').trim();
+      data.horaires = {};
+      DAYS.forEach(function (d) { data.horaires[d] = v('h_' + d).trim(); });
+      CMS.status('saving', 'Enregistrement…');
+      CMS.save(FILE, data, sha, 'Mise à jour infos & horaires').then(function (newSha) {
+        sha = newSha; CMS.status('saved', 'Enregistré ✓');
+        setTimeout(function () { CMS.status('', ''); }, 3000);
+      }).catch(function (e) { CMS.status('error', 'Erreur'); console.error(e); })
+        .finally(function () { btn.disabled = false; });
+    };
+  })();
+  </script>
+</body>
+</html>

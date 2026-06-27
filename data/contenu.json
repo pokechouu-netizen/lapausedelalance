@@ -1,0 +1,91 @@
+{
+  "_commentaire": "Textes et photos du site. Modifiable depuis /admin → Textes / Photos. Texte propre uniquement (pas de balises HTML) ; les retours à la ligne sont conservés.",
+  "textes": {
+    "hero_badge": "Restaurant & Traiteur en Drôme Provençale",
+    "hero_title": "Restaurant La Pause de la Lance",
+
+    "presta1_titre": "Buffets Froids ou Chauds",
+    "presta1_desc": "Des buffets généreux et savoureux, adaptés à tous types d'événements et nombre de convives.",
+    "presta2_titre": "Brunchs",
+    "presta2_desc": "Formules brunch complètes pour vos matinées gourmandes entre amis ou en famille.",
+    "presta3_titre": "Menus de Saison",
+    "presta3_desc": "Des menus élaborés selon les produits de saison pour une fraîcheur et une saveur optimales.",
+    "presta4_titre": "Plats Régionaux",
+    "presta4_desc": "Spécialités du terroir et recettes traditionnelles de notre belle région.",
+    "presta5_titre": "Plats Uniques",
+    "presta5_desc": "Paëlla, couscous, choucroute... Des plats conviviaux pour régaler vos invités.",
+    "presta6_titre": "Apéritifs Dînatoires",
+    "presta6_desc": "Verrines, toasts, bouchées... Une formule élégante pour vos réceptions.",
+    "presta7_titre": "Repas Associatifs",
+    "presta7_desc": "Formules adaptées aux associations et clubs pour vos événements et rassemblements.",
+    "presta8_titre": "Repas de Groupe & Banquets",
+    "presta8_desc": "Grandes tablées et banquets pour vos célébrations familiales ou professionnelles.",
+    "presta9_titre": "Cuisine à Domicile",
+    "presta9_desc": "Notre chef se déplace chez vous pour préparer un repas sur mesure dans votre cuisine.",
+
+    "resto_title": "Cuisine Traditionnelle",
+    "resto_p1": "Bienvenue au restaurant La Pause de la Lance, restaurant proche Valréas où règnent convivialité et authenticité. Midi et soir, nous vous proposons une cuisine simple, traditionnelle et généreuse au cœur de la Drôme Provençale.",
+    "resto_p2": "Notre chef, spécialiste de la cuisine lyonnaise, prépare tout maison : sauces maison, desserts maison, avec des produits frais et de saison.",
+    "resto_p3": "Soirées à thème régulières : Choucroute, Aïoli, Grenouilles, Mont d'Or, Paëlla... Menus uniques lors des événements.",
+    "resto_citation": "« Chef saucier, cuisine de métier, tradition et savoir-faire »",
+    "feature1": "Spécialités lyonnaises",
+    "feature2": "Sauces maison",
+    "feature3": "Desserts maison",
+    "feature4": "Plat du jour",
+    "feature5": "Soirées à thème",
+    "feature6": "À emporter",
+
+    "about_title": "Un Cuisinier de Métier",
+    "chef_nom": "Guy MOIROUD",
+    "about_exp_number": "46",
+    "about_exp_text": "ans d'expérience",
+    "about_p1": "Né à Lyon en 1964, Guy a baigné dès son plus jeune âge dans la culture gastronomique lyonnaise. Pendant 10 ans, il a exercé son art dans les cuisines lyonnaises, perfectionnant sa technique et développant sa spécialité : chef saucier.",
+    "about_p2": "Avec 46 ans d'expérience en cuisine, Guy est un véritable cuisinier de métier. Installé à Valréas depuis 25 ans, il a ouvert La Pause de la Lance il y a 8 ans, pour partager sa passion de la cuisine traditionnelle avec les habitants de l'Enclave des Papes.",
+    "about_p3": "Chaque plat qui sort de sa cuisine est le fruit d'un savoir-faire authentique, transmis de génération en génération, et d'un amour sincère pour les bons produits.",
+    "about_citation": "« La cuisine, c'est avant tout du coeur et du temps. Rien ne remplace une sauce mijotée avec patience. »",
+
+    "events_title": "Animations & Soirées",
+    "events_intro": "Tout au long de l'année, le restaurant La Pause de la Lance organise des soirées à thème et des événements spéciaux pour partager ensemble des moments de convivialité.",
+    "event1": "Soirées Beaujolais Nouveau - Chaque année, fêtez l'arrivée du vin primeur avec un menu spécial lyonnais",
+    "event2": "Journées & Soirées à thème - Choucroute, Aïoli, Grenouilles, Mont d'Or, Paëlla... Menus uniques",
+    "event3": "Traiteur événementiel - Repas associatifs, événements sportifs, célébrations",
+    "event4": "Engagements associatifs - Octobre Rose et autres causes solidaires",
+    "rugby_desc": "Le restaurant La Pause de la Lance soutient activement la vie locale et sportive de Valréas. Fier sponsor de l'US Valréassienne Rugby XV, nous accueillons régulièrement les équipes et les supporters pour des moments de partage autour d'un bon repas. Venez « manger le rugby » avec nous !",
+
+    "partners_title": "Ils nous font confiance",
+    "partner1": "Chris Anim'",
+    "partner2": "Enclav' Event",
+    "partner3": "Delphine Coiffure",
+    "partner4": "Un Brin d'Hair",
+    "partner5": "SPA Eng Sens",
+    "partner6": "Chocolat T",
+    "partner7": "L'Atelier du Pain BIO",
+    "partner8": "E.D.E Emballage",
+    "partner9": "La Cave de Maxime",
+    "partner10": "Le Cochon à la Broche",
+
+    "gallery_title": "Nos Réalisations",
+    "gallery_intro": "Découvrez en images notre cuisine, nos buffets traiteur et l'ambiance de notre restaurant.",
+
+    "cta_title": "Réservez votre table",
+    "cta_text": "Appelez-nous directement pour réserver au restaurant ou demander un devis pour notre service traiteur en Drôme Provençale",
+
+    "contact_title": "Venez nous rendre visite",
+    "contact_intro": "Le restaurant La Pause de la Lance vous accueille 7j/7 au cœur de Valréas, en Drôme Provençale.",
+    "horaires_label": "Ouvert du lundi au vendredi",
+
+    "map_title": "Au cœur de Valréas",
+    "map_text": "Restaurant proche Valréas, dans une rue pittoresque de l'Enclave des Papes en Drôme Provençale",
+
+    "fb_title": "Suivez nos actualités",
+    "fb_intro": "Retrouvez nos dernières publications, soirées à thème et événements directement depuis notre page Facebook."
+  },
+  "photos": {
+    "logo": "asset/logo.png",
+    "restaurant": "asset/PHOTO-2026-01-30-20-40-44.jpg",
+    "chef": "asset/PHOTO-2026-01-30-20-40-36.jpg",
+    "traiteur1": "asset/PHOTO-2026-01-30-20-43-14.jpg",
+    "traiteur2": "asset/PHOTO-2026-01-30-20-43-13.jpg",
+    "traiteur3": "asset/PHOTO-2026-01-30-20-43-13%207.jpg"
+  }
+}

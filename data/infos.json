@@ -1,0 +1,21 @@
+{
+  "_commentaire": "Coordonnées, réseaux et horaires. Modifiable depuis /admin → Infos & horaires. telephone_raw est régénéré automatiquement à l'enregistrement. Laisser netlify_hook vide (le commit déclenche déjà le redéploiement).",
+  "adresse": "17 Rue Pasteur",
+  "code_postal": "84600",
+  "ville": "Valréas",
+  "telephone": "06 78 69 78 54",
+  "telephone_raw": "0678697854",
+  "email": "guymoiroud84@gmail.com",
+  "instagram": "https://www.instagram.com/lapausedelalance/",
+  "facebook": "https://www.facebook.com/Lapausedelalance",
+  "horaires": {
+    "lundi": "11h00 – 14h30 • 18h30 – 21h30",
+    "mardi": "11h00 – 14h30 • 18h30 – 21h30",
+    "mercredi": "11h00 – 14h30 • 18h30 – 21h30",
+    "jeudi": "11h00 – 14h30 • 18h30 – 21h30",
+    "vendredi": "11h00 – 14h30 • 18h30 – 21h30",
+    "samedi": "Fermé",
+    "dimanche": "Fermé"
+  },
+  "netlify_hook": ""
+}

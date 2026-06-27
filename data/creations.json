@@ -1,0 +1,21 @@
+{
+  "_commentaire": "Galerie photos du site. Modifiable depuis /admin → Galerie. categorie ∈ buffets | assiettes | desserts | ambiance. visible=false masque sans supprimer. L'ordre du tableau = l'ordre d'affichage.",
+  "creations": [
+    { "id": "cr1",  "image": "asset/PHOTO-2026-01-30-20-43-14.jpg",     "nom": "Buffet traiteur crudités",       "categorie": "buffets",   "visible": true },
+    { "id": "cr2",  "image": "asset/PHOTO-2026-01-30-20-43-13.jpg",     "nom": "Préparation traiteur",           "categorie": "buffets",   "visible": true },
+    { "id": "cr3",  "image": "asset/PHOTO-2026-01-30-20-43-13%207.jpg", "nom": "Buffet varié",                   "categorie": "buffets",   "visible": true },
+    { "id": "cr4",  "image": "asset/PHOTO-2026-01-29-21-40-38.jpg",     "nom": "Présentation traiteur",          "categorie": "buffets",   "visible": true },
+    { "id": "cr5",  "image": "asset/PHOTO-2026-01-30-20-40-41.jpg",     "nom": "Buffet coloré",                  "categorie": "buffets",   "visible": true },
+    { "id": "cr6",  "image": "asset/PHOTO-2026-01-30-20-40-44.jpg",     "nom": "Plat du jour",                   "categorie": "assiettes", "visible": true },
+    { "id": "cr7",  "image": "asset/PHOTO-2026-01-30-20-40-45%204.jpg", "nom": "Entrecôte frites salade",        "categorie": "assiettes", "visible": true },
+    { "id": "cr8",  "image": "asset/PHOTO-2026-01-30-20-40-45%206.jpg", "nom": "Assiette du terroir",            "categorie": "assiettes", "visible": true },
+    { "id": "cr9",  "image": "asset/PHOTO-2026-01-30-20-43-09.jpg",     "nom": "Plat mijoté sauce",              "categorie": "assiettes", "visible": true },
+    { "id": "cr10", "image": "asset/PHOTO-2026-01-29-21-42-23.jpg",     "nom": "Verrines à l'orange",            "categorie": "desserts",  "visible": true },
+    { "id": "cr11", "image": "asset/PHOTO-2026-01-30-20-40-45%207.jpg", "nom": "Café gourmand",                  "categorie": "desserts",  "visible": true },
+    { "id": "cr12", "image": "asset/PHOTO-2026-01-30-20-40-45%2010.jpg","nom": "Pain perdu caramel glace",       "categorie": "desserts",  "visible": true },
+    { "id": "cr13", "image": "asset/PHOTO-2026-01-30-20-40-46%202.jpg", "nom": "Tarte citron chocolat macarons", "categorie": "desserts",  "visible": true },
+    { "id": "cr14", "image": "asset/PHOTO-2026-01-29-21-43-19.jpg",     "nom": "Terrasse du restaurant",         "categorie": "ambiance",  "visible": true },
+    { "id": "cr15", "image": "asset/PHOTO-2026-01-30-20-40-46%203.jpg", "nom": "Terrasse chauffée illuminée",    "categorie": "ambiance",  "visible": true },
+    { "id": "cr16", "image": "asset/PHOTO-2026-01-29-21-43-19%202.jpg", "nom": "Ambiance restaurant",            "categorie": "ambiance",  "visible": true }
+  ]
+}

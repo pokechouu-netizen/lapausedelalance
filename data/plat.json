@@ -1,0 +1,7 @@
+{
+  "_commentaire": "Plat du jour. Modifiable depuis /admin → Plat du jour. actif=false masque le bloc (affiche 'pas de plat du jour aujourd'hui').",
+  "actif": false,
+  "intitule": "",
+  "description": "",
+  "prix": ""
+}

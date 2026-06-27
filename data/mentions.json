@@ -1,0 +1,6 @@
+{
+  "_commentaire": "Pages légales. Modifiable depuis /admin → Pages légales. Si un champ html est vide, la page affiche son contenu d'origine (fallback dans le HTML) et l'éditeur le pré-remplit automatiquement.",
+  "mentions_legales": { "html": "" },
+  "cgu": { "html": "" },
+  "politique_confidentialite": { "html": "" }
+}

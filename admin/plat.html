@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plat du jour — La Pause de la Lance</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <div id="loginScreen">
+    <div class="brand">La Pause de la Lance</div>
+    <h1>Plat du jour</h1>
+    <p>Connectez-vous pour modifier le plat du jour.</p>
+    <button class="btn-login" onclick="CMS.login()">Se connecter</button>
+  </div>
+
+  <div id="adminScreen">
+    <div class="topbar">
+      <h1>🍽️ Plat du jour</h1>
+      <span class="status" id="statusEl"></span>
+      <a href="index.html" class="btn btn-ghost btn-sm">← Admin</a>
+      <a href="../index.html#restaurant" target="_blank" class="btn btn-ghost btn-sm">Voir le site ↗</a>
+      <button class="btn-text" onclick="CMS.logout()">Déconnexion</button>
+    </div>
+
+    <div class="panel active">
+      <div class="section-card">
+        <div class="fg" style="flex-direction:row;align-items:center;gap:.6rem">
+          <input type="checkbox" id="actif" style="width:auto">
+          <label for="actif" style="text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)">Afficher le plat du jour sur le site</label>
+        </div>
+        <p class="panel-hint" style="margin:.2rem 0 1.2rem">Si décoché (ou si l'intitulé est vide), le site affiche « Pas de plat du jour renseigné aujourd'hui ».</p>
+
+        <div class="fg"><label>Intitulé du plat</label><input type="text" id="intitule" placeholder="Ex : Blanquette de veau à l'ancienne"></div>
+        <div class="fg"><label>Description (facultatif)</label><textarea id="description" rows="3" placeholder="Ex : Servie avec son riz et ses légumes de saison"></textarea></div>
+        <div class="fg" style="max-width:220px"><label>Prix (facultatif)</label><input type="text" id="prix" placeholder="Ex : 14,50 €"></div>
+      </div>
+
+      <div class="form-save-row">
+        <button class="btn btn-primary" id="saveBtn" onclick="saveAll()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cms.js"></script>
+  <script>
+  (function () {
+    'use strict';
+    var FILE = 'data/plat.json';
+    var data = {}, sha = '';
+    function v(id) { return document.getElementById(id).value; }
+    function setv(id, val) { var el = document.getElementById(id); if (el) el.value = val == null ? '' : val; }
+
+    CMS.requireAuth(load);
+
+    function load() {
+      CMS.status('saving', 'Chargement…');
+      CMS.load(FILE).then(function (r) {
+        data = r.data || {}; sha = r.sha;
+        document.getElementById('actif').checked = !!data.actif;
+        setv('intitule', data.intitule); setv('description', data.description); setv('prix', data.prix);
+        CMS.status('', '');
+      }).catch(function (e) { CMS.status('error', 'Erreur de chargement'); console.error(e); });
+    }
+
+    window.saveAll = function () {
+      var btn = document.getElementById('saveBtn'); btn.disabled = true;
+      data.actif = document.getElementById('actif').checked;
+      data.intitule = v('intitule').trim();
+      data.description = v('description').trim();
+      data.prix = v('prix').trim();
+      CMS.status('saving', 'Enregistrement…');
+      CMS.save(FILE, data, sha, 'Mise à jour du plat du jour').then(function (newSha) {
+        sha = newSha; CMS.status('saved', 'Enregistré ✓');
+        setTimeout(function () { CMS.status('', ''); }, 3000);
+      }).catch(function (e) { CMS.status('error', 'Erreur'); console.error(e); })
+        .finally(function () { btn.disabled = false; });
+    };
+  })();
+  </script>
+</body>
+</html>

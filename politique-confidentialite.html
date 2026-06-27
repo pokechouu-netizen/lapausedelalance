@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité du site La Pause de la Lance - Restaurant et Traiteur à Valréas">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Politique de Confidentialité | La Pause de la Lance</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF1744;
+            --primary-dark: #D50000;
+            --secondary: #1a1a2e;
+            --accent: #FF6B6B;
+            --cream: #0f0f1e;
+            --dark: #000000;
+            --text: #ffffff;
+            --text-light: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(10, 10, 21, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 23, 68, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(255, 23, 68, 0.6));
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .legal-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #FF1744 0%, #D50000 50%, #FF6B6B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 23, 68, 0.6);
+        }
+
+        .intro-text {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+            border: 2px solid rgba(255, 23, 68, 0.3);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-text p {
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 23, 68, 0.4);
+            text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .legal-content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .legal-content strong {
+            color: var(--text);
+        }
+
+        .legal-content a {
+            color: var(--primary);
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        .legal-content a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+        }
+
+        .info-box {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+            border: 2px solid rgba(255, 23, 68, 0.3);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .rights-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .rights-table th,
+        .rights-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 23, 68, 0.2);
+        }
+
+        .rights-table th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .rights-table tr {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.6), rgba(22, 33, 62, 0.6));
+        }
+
+        .rights-table tr:hover {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+        }
+
+        .rights-table td {
+            color: var(--text-light);
+        }
+
+        .last-update {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 23, 68, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(180deg, #0a0a15 0%, #000000 100%);
+            color: #fff;
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 23, 68, 0.2);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1rem;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .rights-table {
+                font-size: 0.9rem;
+            }
+
+            .rights-table th,
+            .rights-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="asset/logo.png" alt="La Pause de la Lance">
+        </a>
+        <a href="index.html" class="back-link">
+            ← Retour au site
+        </a>
+    </nav>
+
+    <!-- Content -->
+    <main class="legal-content" id="legalBody">
+        <h1>Politique de Confidentialité</h1>
+
+        <div class="intro-text">
+            <p>La Pause de la Lance s'engage à protéger votre vie privée et vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+        </div>
+
+        <h2>1. Responsable du traitement</h2>
+        <div class="info-box">
+            <p><strong>Responsable :</strong> Guy MOIROUD</p>
+            <p><strong>Entreprise :</strong> La Pause de la Lance</p>
+            <p><strong>Adresse :</strong> 17 rue Pasteur, 84600 Valréas, France</p>
+            <p><strong>Email :</strong> <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></p>
+            <p><strong>Téléphone :</strong> <a href="tel:0678697854">06 78 69 78 54</a></p>
+        </div>
+
+        <h2>2. Données collectées</h2>
+        <p>Dans le cadre de notre activité, nous sommes susceptibles de collecter les données suivantes :</p>
+
+        <h3>2.1 Données collectées directement</h3>
+        <ul>
+            <li><strong>Données d'identification :</strong> nom, prénom</li>
+            <li><strong>Coordonnées :</strong> adresse email, numéro de téléphone, adresse postale</li>
+            <li><strong>Données de réservation :</strong> date, heure, nombre de personnes, préférences alimentaires</li>
+            <li><strong>Données de commande traiteur :</strong> détails de la prestation, lieu de livraison</li>
+        </ul>
+
+        <h3>2.2 Données collectées automatiquement</h3>
+        <ul>
+            <li><strong>Données de navigation :</strong> adresse IP, type de navigateur, pages visitées</li>
+        </ul>
+
+        <h2>3. Finalités du traitement</h2>
+        <p>Vos données personnelles sont collectées et traitées pour les finalités suivantes :</p>
+        <ul>
+            <li>Gestion des réservations au restaurant</li>
+            <li>Gestion des commandes et prestations traiteur</li>
+            <li>Communication relative à vos commandes ou réservations</li>
+            <li>Envoi d'informations sur nos événements et actualités (uniquement avec votre consentement)</li>
+            <li>Amélioration de nos services et de notre site internet</li>
+            <li>Respect de nos obligations légales et réglementaires</li>
+        </ul>
+
+        <h2>4. Base légale du traitement</h2>
+        <p>Le traitement de vos données repose sur les bases légales suivantes :</p>
+        <ul>
+            <li><strong>L'exécution d'un contrat :</strong> pour le traitement de vos réservations et commandes</li>
+            <li><strong>Votre consentement :</strong> pour l'envoi de communications commerciales</li>
+            <li><strong>L'intérêt légitime :</strong> pour l'amélioration de nos services</li>
+            <li><strong>Les obligations légales :</strong> pour la conservation de certaines données (facturation, comptabilité)</li>
+        </ul>
+
+        <h2>5. Destinataires des données</h2>
+        <p>Vos données personnelles sont destinées uniquement à :</p>
+        <ul>
+            <li>L'équipe de La Pause de la Lance (gestion des réservations et commandes)</li>
+            <li>Nos prestataires techniques (hébergeur du site) dans le strict cadre de leurs missions</li>
+        </ul>
+        <p><strong>Nous ne vendons, ne louons et ne partageons jamais vos données personnelles avec des tiers à des fins commerciales.</strong></p>
+
+        <h2>6. Durée de conservation</h2>
+        <p>Vos données personnelles sont conservées pendant les durées suivantes :</p>
+        <ul>
+            <li><strong>Données de réservation :</strong> 1 an après la date de la réservation</li>
+            <li><strong>Données de commande traiteur :</strong> durée légale de conservation des documents comptables (10 ans)</li>
+            <li><strong>Données de contact (newsletter) :</strong> 3 ans à compter du dernier contact ou jusqu'à votre désinscription</li>
+        </ul>
+
+        <h2>7. Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+
+        <table class="rights-table">
+            <thead>
+                <tr>
+                    <th>Droit</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Droit d'accès</strong></td>
+                    <td>Obtenir la confirmation que vos données sont traitées et en recevoir une copie</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit de rectification</strong></td>
+                    <td>Faire corriger des données inexactes ou incomplètes</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit à l'effacement</strong></td>
+                    <td>Demander la suppression de vos données dans certains cas</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit à la limitation</strong></td>
+                    <td>Demander la suspension du traitement de vos données</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit à la portabilité</strong></td>
+                    <td>Recevoir vos données dans un format structuré et les transmettre à un autre responsable</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit d'opposition</strong></td>
+                    <td>Vous opposer au traitement de vos données pour des raisons tenant à votre situation particulière</td>
+                </tr>
+                <tr>
+                    <td><strong>Droit de retrait du consentement</strong></td>
+                    <td>Retirer votre consentement à tout moment pour les traitements basés sur celui-ci</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Comment exercer vos droits ?</h3>
+        <p>Pour exercer l'un de ces droits, vous pouvez nous contacter :</p>
+        <div class="info-box">
+            <p><strong>Par email :</strong> <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></p>
+            <p><strong>Par courrier :</strong> La Pause de la Lance, 17 rue Pasteur, 84600 Valréas</p>
+            <p><strong>Par téléphone :</strong> <a href="tel:0678697854">06 78 69 78 54</a></p>
+        </div>
+        <p>Nous nous engageons à répondre à votre demande dans un délai d'un mois. Ce délai peut être prolongé de deux mois en cas de demande complexe.</p>
+
+        <h2>8. Sécurité des données</h2>
+        <p>Nous mettons en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la destruction, la perte, l'altération, la divulgation ou l'accès non autorisé.</p>
+
+        <h2>9. Transferts de données hors UE</h2>
+        <p>Vos données personnelles sont hébergées et traitées au sein de l'Union européenne. Aucun transfert de données n'est effectué vers des pays situés hors de l'Union européenne.</p>
+
+        <h2>10. Réclamation auprès de la CNIL</h2>
+        <p>Si vous estimez que vos droits ne sont pas respectés, vous avez la possibilité d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) :</p>
+        <div class="info-box">
+            <p><strong>CNIL</strong></p>
+            <p>3 Place de Fontenoy - TSA 80715</p>
+            <p>75334 Paris Cedex 07</p>
+            <p>Site web : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+        </div>
+
+        <h2>12. Modification de la politique</h2>
+        <p>Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. En cas de modification substantielle, nous vous en informerons par tout moyen approprié.</p>
+        <p>Nous vous invitons à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.</p>
+
+        <h2>13. Contact</h2>
+        <p>Pour toute question relative à cette politique de confidentialité ou à la protection de vos données personnelles, vous pouvez nous contacter :</p>
+        <div class="info-box">
+            <p><strong>La Pause de la Lance</strong></p>
+            <p>Guy MOIROUD</p>
+            <p>17 rue Pasteur, 84600 Valréas</p>
+            <p>Email : <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:0678697854">06 78 69 78 54</a></p>
+        </div>
+
+        <p class="last-update">Dernière mise à jour : Février 2026</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 La Pause de la Lance - Guy MOIROUD - Tous droits réservés</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="index.html">Accueil</a> |
+            <a href="mentions-legales.html">Mentions légales</a> |
+            <a href="cgu.html">Conditions d'utilisation</a>
+        </p>
+    </footer>
+
+    <!-- Contenu éditable via /admin → Pages légales (fallback : contenu ci-dessus) -->
+    <script>
+        fetch('data/mentions.json', { cache: 'no-store' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d) {
+                if (d && d.politique_confidentialite && d.politique_confidentialite.html && d.politique_confidentialite.html.trim())
+                    document.getElementById('legalBody').innerHTML = d.politique_confidentialite.html;
+            }).catch(function () {});
+    </script>
+</body>
+</html>

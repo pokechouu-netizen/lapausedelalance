@@ -1,0 +1,5 @@
+# Espace d'administration (CMS)
+/admin    /admin/index.html    200
+
+# Forcer le domaine sans www
+https://www.lapausedelalance.fr/* https://lapausedelalance.fr/:splat 301!

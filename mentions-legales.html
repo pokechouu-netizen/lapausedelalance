@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentions légales du site La Pause de la Lance - Restaurant et Traiteur à Valréas">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Mentions Légales | La Pause de la Lance</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF1744;
+            --primary-dark: #D50000;
+            --secondary: #1a1a2e;
+            --accent: #FF6B6B;
+            --cream: #0f0f1e;
+            --dark: #000000;
+            --text: #ffffff;
+            --text-light: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(10, 10, 21, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 23, 68, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(255, 23, 68, 0.6));
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .legal-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #FF1744 0%, #D50000 50%, #FF6B6B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 23, 68, 0.6);
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 23, 68, 0.4);
+            text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .legal-content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .legal-content strong {
+            color: var(--text);
+        }
+
+        .legal-content a {
+            color: var(--primary);
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        .legal-content a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+        }
+
+        .info-box {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+            border: 2px solid rgba(255, 23, 68, 0.3);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .last-update {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 23, 68, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(180deg, #0a0a15 0%, #000000 100%);
+            color: #fff;
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 23, 68, 0.2);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1rem;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="asset/logo.png" alt="La Pause de la Lance">
+        </a>
+        <a href="index.html" class="back-link">
+            ← Retour au site
+        </a>
+    </nav>
+
+    <!-- Content -->
+    <main class="legal-content" id="legalBody">
+        <h1>Mentions Légales</h1>
+
+        <h2>1. Éditeur du site</h2>
+
+        <div class="info-box">
+            <p><strong>Nom commercial :</strong> La Pause de la Lance</p>
+            <p><strong>Dirigeant :</strong> Guy MOIROUD</p>
+            <p><strong>Forme juridique :</strong> Entrepreneur individuel</p>
+            <p><strong>Directeur de la publication :</strong> Guy MOIROUD</p>
+        </div>
+
+        <h3>Coordonnées</h3>
+        <div class="info-box">
+            <p><strong>Adresse :</strong> 17 rue Pasteur, 84600 Valréas, France</p>
+            <p><strong>Téléphone :</strong> <a href="tel:0678697854">06 78 69 78 54</a></p>
+            <p><strong>Email :</strong> <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></p>
+        </div>
+
+        <h3>Informations légales</h3>
+        <div class="info-box">
+            <p><strong>SIREN :</strong> 353 770 100</p>
+            <p><strong>SIRET (siège) :</strong> 353 770 100 00025</p>
+            <p><strong>RCS :</strong> Avignon – 353 770 100</p>
+            <p><strong>Code APE :</strong> 56.10C – Restauration de type rapide</p>
+            <p><strong>TVA intracommunautaire :</strong> FR41 353770100</p>
+            <p><strong>Activité :</strong> Restaurant, traiteur, cuisine traditionnelle</p>
+        </div>
+
+        <h2>2. Hébergeur du site</h2>
+        <p>Ce site est hébergé par :</p>
+        <div class="info-box">
+            <p><strong>Nom de l'hébergeur :</strong> Netlify</p>
+            <p><strong>Raison sociale :</strong> Netlify, Inc.</p>
+            <p><strong>Adresse :</strong> 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis</p>
+            <p><strong>Site web :</strong> <a href="https://www.netlify.com" target="_blank">www.netlify.com</a></p>
+        </div>
+
+        <h2>3. Conception et réalisation du site</h2>
+        <div class="info-box">
+            <p><strong>Conception et développement :</strong> Réalisation artisanale</p>
+            <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript</p>
+        </div>
+
+        <h2>4. Propriété intellectuelle</h2>
+        <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+        <p>La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.</p>
+
+        <h2>5. Limitation de responsabilité</h2>
+        <p>Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement mis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.</p>
+        <p>Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler par email à <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a>, en décrivant le problème de la manière la plus précise possible.</p>
+        <p>La Pause de la Lance ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l'utilisateur, lors de l'accès au site.</p>
+
+        <h2>6. Liens hypertextes</h2>
+        <p>Les liens hypertextes mis en place dans le cadre du présent site internet en direction d'autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de La Pause de la Lance.</p>
+
+        <h2>7. Protection des données personnelles</h2>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.</p>
+        <p>Pour exercer ce droit, vous pouvez nous contacter :</p>
+        <ul>
+            <li>Par email : <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></li>
+            <li>Par courrier : La Pause de la Lance, 17 rue Pasteur, 84600 Valréas</li>
+        </ul>
+        <p>Pour plus d'informations, consultez notre <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+
+        <h2>8. Droit applicable et juridiction compétente</h2>
+        <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+
+        <h2>9. Contact</h2>
+        <p>Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter :</p>
+        <ul>
+            <li><strong>Téléphone :</strong> <a href="tel:0678697854">06 78 69 78 54</a></li>
+            <li><strong>Email :</strong> <a href="mailto:guymoiroud84@gmail.com">guymoiroud84@gmail.com</a></li>
+            <li><strong>Adresse :</strong> 17 rue Pasteur, 84600 Valréas</li>
+        </ul>
+
+        <p class="last-update">Dernière mise à jour : Février 2026</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 La Pause de la Lance - Guy MOIROUD - Tous droits réservés</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="index.html">Accueil</a> |
+            <a href="cgu.html">Conditions d'utilisation</a> |
+            <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        </p>
+    </footer>
+
+    <!-- Contenu éditable via /admin → Pages légales (fallback : contenu ci-dessus) -->
+    <script>
+        fetch('data/mentions.json', { cache: 'no-store' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d) {
+                if (d && d.mentions_legales && d.mentions_legales.html && d.mentions_legales.html.trim())
+                    document.getElementById('legalBody').innerHTML = d.mentions_legales.html;
+            }).catch(function () {});
+    </script>
+</body>
+</html>
